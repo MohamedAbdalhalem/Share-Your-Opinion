@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+#main-header {
+  text-align: center;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #cbd5f5;
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: 'Rubik', sans-serif;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+#main-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+/* ================= MAIN ================= */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* ================= FORM ================= */
+#new-opinion {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#new-opinion h2 {
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+/* CONTROL */
+.control {
+  margin-bottom: 1rem;
+}
+
+.control-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.control-row .control {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ================= INPUTS ================= */
+form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+/* INPUT STYLE */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+/* placeholder */
+form input::placeholder,
+form textarea::placeholder {
+  color: #64748b;
+}
+
+/* focus glow 🔥 */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #020617;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.25),
+    0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* hover */
+form input:hover,
+form textarea:hover {
+  border-color: #475569;
+}
+
+/* textarea */
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* error */
+form input.error,
+form textarea.error {
+  border-color: #ef4444;
+  background-color: #450a0a;
+}
+
+/* ================= BUTTON ================= */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+form button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+form button:disabled {
+  background-color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================= OPINIONS ================= */
+#opinions ul {
+  padding: 0;
+  margin-top: 2rem;
+}
+
+#opinions li {
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#opinions li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#opinions h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+#opinions header p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+#opinions p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* ================= VOTES ================= */
+.votes {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.votes span {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.votes button {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+
+.votes button:hover {
+  color: #3b82f6;
+}
+
+.votes button:disabled {
+  color: #cbd5f5;
+  cursor: not-allowed;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    justify-content: center;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .control-row {
+    flex-direction: column;
+  }
+}
